@@ -5,6 +5,7 @@ import { apiController } from "./controllers/api.js";
 export const app = new Hono();
 
 app.route("/api/v1", apiController);
+app.route("/api", apiController);
 
 app.notFound((c) => c.json({ error: "Route not found" }, 404));
 
